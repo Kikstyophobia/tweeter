@@ -1,0 +1,35 @@
+
+.container {
+  position: relative;
+  top: 120px;
+}
+
+#tweet-text {
+  border: none;
+  border-bottom: 5px solid black;
+  background: transparent;
+  width: 100%;
+}
+
+#tweet-button {
+  font-family: "Bungee";
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  border: none
+}
+
+.counter {
+  font-family: "Bungee";
+}
+
+.counter-red {
+  font-family: "Bungee";
+  color: red;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
