@@ -1,6 +1,6 @@
 $(document).ready(function() {
   
-  //textarea 
+  //textarea chacter-counter colours
   $('#tweet-text').on('input', function() {
     const inputValue = $(this).val().length;
     $(".counter").val(140 - inputValue);

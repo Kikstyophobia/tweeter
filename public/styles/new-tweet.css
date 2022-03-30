@@ -28,8 +28,50 @@
   color: red;
 }
 
-.tweet-footer {
+.new-tweet-footer {
   display: flex;
   justify-content: space-between;
 }
+
+
+/* displayed-tweet header */
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet-header .icon-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* diplayed-tweet footer */
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.tweet-footer i {
+  font-size: 12px;
+}
+
+
+/* displayed-tweet body */
+.tweet-body {
+  border-bottom: 5px solid black;
+}
+
+/* body of the displayed tweet */
+.full-tweet {
+  border: 5px solid black;
+  margin-top: 1.5em;
+  padding: 20px 20px 10px 20px;
+  box-shadow: 7px 8px 3px 2px rgba(0,0,0,0.24);
+}
+
+
 
