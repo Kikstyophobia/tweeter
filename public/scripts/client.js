@@ -4,18 +4,26 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  * 
  */
-
+const escapeFunc = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
 const createTweetElement = (tweet) => {
-  const timeAgo = timeago.format(tweet.created_at)
-
+  const timeAgo = timeago.format(tweet.created_at);
+  const avatar = tweet.user.avatars;
+  const name = tweet.user.name;
+  const handle = tweet.user.handle;
+  const text = escapeFunc(tweet.content.text);
+  
   const $tweet = $(`<article class="full-tweet">
       <header class="tweet-header">
-        <div class="icon-name"><img src=${tweet.user.avatars}></img><span>${tweet.user.name}</span>
+        <div class="icon-name"><img src=${avatar}></img><span>${name}</span>
         </div>
-        <span>${tweet.user.handle}</span>
+        <span>${handle}</span>
       </header>
-      <p class="tweet-body">${tweet.content.text}</p>
+      <p class="tweet-body">${text}</p>
       <footer class="tweet-footer">
         <span>${timeAgo}</span>
         <div>
@@ -24,7 +32,7 @@ const createTweetElement = (tweet) => {
           <i class="fa-solid fa-heart"></i>
         </div>
       </footer>
-    </article>`);
+    </article>`)
 
   return $tweet;
 
@@ -60,15 +68,19 @@ $(document).ready(function () {
     const counter = $('#tweet-counter').val();
 
     if (counter == 140) {
-      alert("Tweet form cannot be empty.");
+      $('.tweet-error-empty').slideDown();
+      $('.tweet-error-chars').slideUp();
     } else if (counter < 0) {
-      alert("Tweet is over 140 characters.");
+      $('.tweet-error-empty').slideUp();
+      $('.tweet-error-chars').slideDown();
+
     } else {
       $.ajax({
         type: "POST",
         url: '/tweets',
         data: tweetData,
         success: function(){
+          $('.tweet-error-empty, .tweet-error-chars').slideUp();
             $('.tweets').empty();
             loadTweets();
         },

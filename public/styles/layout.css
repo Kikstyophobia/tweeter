@@ -50,3 +50,14 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.tweet-error-empty, .tweet-error-chars {
+  display: none;
+  color: red;
+  border: 5px solid red;
+  padding: 20px 10px;
+}
+
+.fa-triangle-exclamation {
+  padding-right: 10px;
+}
