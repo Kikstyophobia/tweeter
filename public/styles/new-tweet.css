@@ -6,7 +6,7 @@
 
 #tweet-text {
   border: none;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #4056A1;
   background: transparent;
   width: 100%;
 }
@@ -62,16 +62,18 @@
 
 /* displayed-tweet body */
 .tweet-body {
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #4056A1;
 }
 
 /* body of the displayed tweet */
 .full-tweet {
-  border: 5px solid black;
+  border: 5px solid #4056A1;
   margin-top: 1.5em;
   padding: 20px 20px 10px 20px;
-  box-shadow: 7px 8px 3px 2px rgba(0,0,0,0.24);
+  
 }
 
-
+.full-tweet:hover {
+  box-shadow: 7px 8px 3px 2px rgba(0,0,0,0.24);
+}
 

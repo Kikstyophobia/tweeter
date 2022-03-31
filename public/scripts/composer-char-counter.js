@@ -13,10 +13,10 @@ $(document).ready(function() {
     
   });
   
-  const $tweetButton = $('#tweet-button');
-  $tweetButton.on('click', () => {
-    console.log("clicked");
-  })
+  // const $tweetButton = $('#tweet-button');
+  // $tweetButton.on('click', () => {
+    
+  // })
 
 });
 
