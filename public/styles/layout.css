@@ -27,10 +27,21 @@ body {
   margin-left: 1.5em;
 }
 
-
 #writeTweet {
   font-family: "Source Sans Pro";
   margin-right: 1.5em;
+}
+
+@media only screen and (max-width: 1024px){
+  body {
+    color: #4056A1;
+  }
+  #logo {
+    color: #4056A1;
+  }
+  #writeTweet {
+    color: #4056A1;
+  }
 }
 
 .fa-angles-down {
@@ -61,3 +72,31 @@ body {
 .fa-triangle-exclamation {
   padding-right: 10px;
 }
+
+.page {
+  display: flex;
+  padding-top: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  justify-content: space-around;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px){
+  .page {
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #header {
+    width: 100%;
+    top: 20px;
+  }
+  #logo-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+

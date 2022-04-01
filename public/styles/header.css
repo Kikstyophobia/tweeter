@@ -2,11 +2,20 @@
   height: 400px;
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: blanchedalmond;
   position: relative;
   top: 120px;
+}
+
+#logo-container {
+  background-color:blanchedalmond;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  max-width: 500px;
 }
 
