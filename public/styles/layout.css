@@ -83,6 +83,7 @@ body {
   margin: 0 auto;
 }
 
+/* adjusts for mobile use */
 @media only screen and (max-width: 1024px){
   .page {
     display: block;

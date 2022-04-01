@@ -46,6 +46,7 @@ const renderTweets = (tweetObject) => {
 
 
 $(document).ready(function () {
+  
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
@@ -59,7 +60,6 @@ $(document).ready(function () {
       }
     });
   };
-
 
   
   $('#tweet-form').submit((event) => {
@@ -90,7 +90,5 @@ $(document).ready(function () {
       })
     }
   });
- 
- 
 });
 

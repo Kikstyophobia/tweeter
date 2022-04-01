@@ -12,11 +12,6 @@ $(document).ready(function() {
     }
     
   });
-  
-  // const $tweetButton = $('#tweet-button');
-  // $tweetButton.on('click', () => {
-    
-  // })
 
 });
 
