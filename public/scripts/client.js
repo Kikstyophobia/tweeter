@@ -60,7 +60,7 @@ $(document).ready(function () {
       }
     });
   };
-
+  loadTweets();
   
   $('#tweet-form').submit((event) => {
     event.preventDefault();
